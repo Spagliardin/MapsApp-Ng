@@ -1,0 +1,18 @@
+
+<ul class="list-group">
+    <li class="list-group-item list-group-item-info"
+        (click)='addMarket()'>
+        + Agregar
+    </li>
+    <li class="list-group-item"
+        (click)='goMarker( markers[i].marker! )'
+        (dblclick)='deleteMarker( i )'
+        *ngFor="let item of markers; let i = index"
+        [ngStyle]="{'background-color': markers[i].color}">
+        Marker {{ i + 1}}
+    </li>
+</ul>
+
+
+
+<div #mapsZoom class="mapa-container">
